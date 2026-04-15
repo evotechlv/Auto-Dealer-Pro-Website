@@ -24,7 +24,7 @@ export default function Hero() {
           <p className="hero__sub">
             We are live and you're officially invited to see what's new.
             The all-in-one app for independent auto dealers —
-            inventory, invoices, expenses, and profits in your pocket.
+            inventory, expenses, sales, and profits in your pocket.
           </p>
 
           <div className="hero__badges">

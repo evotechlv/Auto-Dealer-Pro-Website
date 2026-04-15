@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     stars: 5,
-    quote: "Finally an app built for dealers like me. Generating invoices used to take 30 minutes of paperwork. Now it's done before the customer even drives off the lot.",
+    quote: "Finally an app built for dealers like me. Tracking sales and expenses used to take 30 minutes of paperwork. Now it's all logged before the customer even drives off the lot.",
     name: 'Marcus T.',
     role: 'Used Car Dealer, Phoenix AZ',
     avatar: '🏪',
@@ -28,7 +28,7 @@ const stats = [
   { value: '4.8★', label: 'App Store Rating' },
   { value: '500+', label: 'Dealers Using It' },
   { value: '$0', label: 'First 14 Days' },
-  { value: '60s', label: 'To Generate Invoice' },
+  { value: '60s', label: 'To Log a Sale' },
 ]
 
 export default function Testimonials() {

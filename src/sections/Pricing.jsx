@@ -26,7 +26,7 @@ const plans = [
     features: [
       'Everything in Free Trial',
       'Full inventory management',
-      'Invoice generation & scanning',
+      'Document scanning & storage',
       'Expense tracking & reports',
       'Profit dashboard',
     ],

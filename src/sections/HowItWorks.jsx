@@ -19,7 +19,7 @@ const steps = [
     num: '03',
     icon: '📊',
     title: 'Run Your Business',
-    desc: 'Track every sale, expense, and profit in real time. Generate invoices, scan documents, and grow your lot.',
+    desc: 'Track every sale, expense, and profit in real time. Scan documents, review your dashboard, and grow your lot.',
     accent: 'green',
   },
 ]

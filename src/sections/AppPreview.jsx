@@ -71,7 +71,7 @@ export default function AppPreview() {
             { icon: '📊', label: 'Revenue & Profits' },
             { icon: '🚗', label: 'Inventory Management' },
             { icon: '💰', label: 'Expense Tracking' },
-            { icon: '🧾', label: 'One-Tap Invoices' },
+            { icon: '📝', label: 'Sales Records' },
           ].map((h, i) => (
             <div className="preview__pill" key={i}>
               <span className="preview__pill-icon">{h.icon}</span>

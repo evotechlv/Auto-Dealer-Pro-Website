@@ -12,9 +12,9 @@ const features = [
     desc: 'See exactly how much you made on every car. Real-time profit margins calculated automatically.',
   },
   {
-    icon: '🧾',
-    title: 'Invoice Generation',
-    desc: 'Create professional sale invoices in under 60 seconds and send them via text or email instantly.',
+    icon: '📝',
+    title: 'Sales Records',
+    desc: 'Log every sale with buyer info, price, and notes. Build a complete history of every deal you close.',
   },
   {
     icon: '💸',
