@@ -14,7 +14,7 @@ const plans = [
       'iOS App (Android coming soon)',
     ],
     cta: 'Start Free',
-    ctaHref: 'https://apps.apple.com/us/app/auto-dealer-pro/id6761709277',
+    ctaHref: 'https://apps.apple.com/us/app/auto-dealer-pro/id6761709277?itscg=30200&itsct=apps_box_link&mttnsubad=6761709277',
     ctaStyle: 'gray',
   },
   {
@@ -31,7 +31,7 @@ const plans = [
       'Profit dashboard',
     ],
     cta: 'Get Started',
-    ctaHref: 'https://apps.apple.com/us/app/auto-dealer-pro/id6761709277',
+    ctaHref: 'https://apps.apple.com/us/app/auto-dealer-pro/id6761709277?itscg=30200&itsct=apps_box_link&mttnsubad=6761709277',
     ctaStyle: 'blue',
   },
   {
@@ -47,7 +47,7 @@ const plans = [
       'Early access to new features',
     ],
     cta: 'Best Value',
-    ctaHref: 'https://apps.apple.com/us/app/auto-dealer-pro/id6761709277',
+    ctaHref: 'https://apps.apple.com/us/app/auto-dealer-pro/id6761709277?itscg=30200&itsct=apps_box_link&mttnsubad=6761709277',
     ctaStyle: 'green',
   },
 ]

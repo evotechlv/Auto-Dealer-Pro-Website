@@ -18,7 +18,7 @@ export default function Header() {
           <a href="#pricing" onClick={() => setOpen(false)}>Pricing</a>
           <a href="#android" onClick={() => setOpen(false)}>Android</a>
           <a
-            href="https://apps.apple.com/us/app/auto-dealer-pro/id6761709277"
+            href="https://apps.apple.com/us/app/auto-dealer-pro/id6761709277?itscg=30200&itsct=apps_box_link&mttnsubad=6761709277"
             target="_blank"
             rel="noopener noreferrer"
             className="header__cta"

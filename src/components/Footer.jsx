@@ -8,7 +8,7 @@ const productLinks = [
 ]
 
 const companyLinks = [
-  { label: 'Download on iOS', href: 'https://apps.apple.com/us/app/auto-dealer-pro/id6761709277', external: true },
+  { label: 'Download on iOS', href: 'https://apps.apple.com/us/app/auto-dealer-pro/id6761709277?itscg=30200&itsct=apps_box_link&mttnsubad=6761709277', external: true },
   { label: 'Privacy Policy', href: '/privacy', external: false },
   { label: 'Terms of Service', href: '/terms', external: false },
   { label: 'Support', href: 'mailto:support@myautodealerpro.com', external: true },
@@ -100,7 +100,7 @@ export default function Footer() {
           <div className="footer__col footer__col--badges">
             <h4 className="footer__col-title">Download</h4>
             <a
-              href="https://apps.apple.com/us/app/auto-dealer-pro/id6761709277"
+              href="https://apps.apple.com/us/app/auto-dealer-pro/id6761709277?itscg=30200&itsct=apps_box_link&mttnsubad=6761709277"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__badge-link"
