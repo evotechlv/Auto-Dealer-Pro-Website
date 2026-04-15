@@ -1,0 +1,171 @@
+/* ── Section shell ── */
+.preview {
+  background: var(--dark1);
+  position: relative;
+  overflow: hidden;
+}
+
+.preview__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(26,107,255,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 20% 80%, rgba(74,222,128,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ── Header ── */
+.preview__header {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 64px;
+}
+
+/* ── Stage (3-card gallery) ── */
+.preview__stage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+}
+
+/* ── Individual cards ── */
+.preview__card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  flex-shrink: 0;
+}
+
+.preview__card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Left — square post, rotated left, smaller */
+.preview__card--left {
+  width: 260px;
+  aspect-ratio: 1 / 1;
+  transform: rotate(-4deg) translateY(20px);
+  border: 1.5px solid rgba(255,255,255,0.08);
+}
+.preview__card--left:hover {
+  transform: rotate(-2deg) translateY(8px);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.65);
+}
+
+/* Center — portrait, straight, largest */
+.preview__card--center {
+  width: 280px;
+  z-index: 2;
+  transform: translateY(0);
+  border: 1.5px solid rgba(26,107,255,0.35);
+  box-shadow: 0 32px 80px rgba(26,107,255,0.22), 0 24px 64px rgba(0,0,0,0.55);
+}
+.preview__card--center:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 44px 100px rgba(26,107,255,0.3), 0 32px 80px rgba(0,0,0,0.6);
+}
+
+/* Glowing top edge on center card */
+.preview__phone-frame {
+  position: relative;
+  width: 100%;
+}
+.preview__phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  z-index: 1;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Right — landscape banner, rotated right, medium */
+.preview__card--right {
+  width: 300px;
+  aspect-ratio: 5 / 3;
+  transform: rotate(3deg) translateY(20px);
+  border: 1.5px solid rgba(255,255,255,0.08);
+}
+.preview__card--right:hover {
+  transform: rotate(1.5deg) translateY(8px);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.65);
+}
+
+/* ── Feature pills ── */
+.preview__pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 56px;
+}
+
+.preview__pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 999px;
+  padding: 10px 20px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.preview__pill:hover {
+  background: rgba(26,107,255,0.08);
+  border-color: rgba(26,107,255,0.3);
+}
+
+.preview__pill-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.preview__pill-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .preview__stage {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .preview__card--left,
+  .preview__card--right {
+    transform: none;
+    width: 100%;
+    max-width: 340px;
+  }
+  .preview__card--left:hover,
+  .preview__card--right:hover {
+    transform: translateY(-4px);
+  }
+
+  .preview__card--center {
+    width: 100%;
+    max-width: 300px;
+    order: -1;
+  }
+
+  .preview__card--right {
+    aspect-ratio: 5 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .preview__pills { gap: 8px; }
+  .preview__pill { padding: 8px 14px; }
+  .preview__pill-label { font-size: 13px; }
+}
