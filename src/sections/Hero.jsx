@@ -57,7 +57,7 @@ export default function Hero() {
           <div className="hero__proof">
             <span>⭐ 4.8 App Store</span>
             <span className="hero__proof-dot">·</span>
-            <span>🔒 Free 30-Day Trial</span>
+            <span>🔒 Free 14-Day Trial</span>
             <span className="hero__proof-dot">·</span>
             <span>🚗 Built for Dealers</span>
           </div>

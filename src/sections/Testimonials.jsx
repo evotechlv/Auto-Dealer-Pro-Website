@@ -27,7 +27,7 @@ const testimonials = [
 const stats = [
   { value: '4.8★', label: 'App Store Rating' },
   { value: '500+', label: 'Dealers Using It' },
-  { value: '$0', label: 'First 30 Days' },
+  { value: '$0', label: 'First 14 Days' },
   { value: '60s', label: 'To Generate Invoice' },
 ]
 

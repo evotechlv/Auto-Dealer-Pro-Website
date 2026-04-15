@@ -33,7 +33,7 @@ export default function AndroidWaitlist() {
           <ul className="android__perks">
             <li>✅ First to know when Android launches</li>
             <li>✅ Exclusive early-bird discount</li>
-            <li>✅ Free 30-day trial included</li>
+            <li>✅ Free 14-day trial included</li>
           </ul>
 
           <form className="waitlist-form" onSubmit={handleSubmit}>

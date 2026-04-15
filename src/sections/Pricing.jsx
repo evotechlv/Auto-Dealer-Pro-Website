@@ -4,7 +4,7 @@ const plans = [
   {
     name: 'Free Trial',
     price: '0',
-    period: 'First 30 days',
+    period: 'First 14 days',
     highlight: false,
     badge: null,
     features: [
@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: 'Monthly',
-    price: '19',
+    price: '29.99',
     period: 'per month',
     highlight: true,
     badge: '⭐ Most Popular',
@@ -36,13 +36,13 @@ const plans = [
   },
   {
     name: 'Annual',
-    price: '14',
-    period: '/ month, billed yearly',
+    price: '249.99',
+    period: '/ year (≈ $20.83/mo)',
     highlight: false,
     badge: null,
     features: [
       'Everything in Monthly',
-      'Save 26% vs monthly',
+      'Save 31% vs monthly',
       'Priority support',
       'Early access to new features',
     ],
@@ -70,7 +70,7 @@ export default function Pricing() {
             >
               {plan.badge && <div className="pricing-card__badge">{plan.badge}</div>}
               <div className="pricing-card__name">{plan.name}</div>
-              <div className="pricing-card__price">
+              <div className={`pricing-card__price ${plan.price.length > 4 ? 'pricing-card__price--lg' : ''}`}>
                 <sup>$</sup>{plan.price}
               </div>
               <div className={`pricing-card__period ${plan.ctaStyle === 'green' ? 'pricing-card__period--green' : ''}`}>

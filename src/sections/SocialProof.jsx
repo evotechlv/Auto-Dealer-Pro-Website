@@ -5,7 +5,7 @@ const items = [
   { icon: '🚗', text: 'Built for Independent Dealers' },
   { icon: '📱', text: 'iOS App — Live Now' },
   { icon: '🔒', text: 'Secure & Private' },
-  { icon: '💸', text: 'Free 30-Day Trial' },
+  { icon: '💸', text: 'Free 14-Day Trial' },
 ]
 
 export default function SocialProof() {

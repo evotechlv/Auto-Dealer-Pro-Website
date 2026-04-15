@@ -1,38 +1,124 @@
 .how { position: relative; background: var(--dark2); overflow: hidden; }
 .how__bg {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(234,88,12,0.05) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(234,88,12,0.04) 0%, transparent 60%);
   pointer-events: none;
 }
 
 .how__header { margin-bottom: 72px; }
 
+/* ── Step grid ── */
 .how__steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
   position: relative;
+  align-items: stretch;
 }
 
+/* ── Individual card ── */
 .how__step {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 36px 28px;
   position: relative;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 24px;
+  padding: 36px 28px 32px;
+  overflow: hidden;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.how__step:hover { transform: translateY(-5px); }
+
+/* Subtle glow in top-left corner on hover */
+.how__step::before {
+  content: '';
+  position: absolute;
+  top: -40px; left: -40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+}
+.how__step:hover::before { opacity: 1; }
+
+/* ── Per-accent colors ── */
+.how__step--orange { border-color: rgba(234,88,12,0.2); }
+.how__step--orange:hover { border-color: rgba(234,88,12,0.5); box-shadow: 0 20px 60px rgba(234,88,12,0.1); }
+.how__step--orange::before { background: radial-gradient(circle, rgba(234,88,12,0.18), transparent 70%); }
+
+.how__step--blue { border-color: rgba(26,107,255,0.2); }
+.how__step--blue:hover { border-color: rgba(26,107,255,0.5); box-shadow: 0 20px 60px rgba(26,107,255,0.1); }
+.how__step--blue::before { background: radial-gradient(circle, rgba(26,107,255,0.18), transparent 70%); }
+
+.how__step--green { border-color: rgba(74,222,128,0.2); }
+.how__step--green:hover { border-color: rgba(74,222,128,0.5); box-shadow: 0 20px 60px rgba(74,222,128,0.08); }
+.how__step--green::before { background: radial-gradient(circle, rgba(74,222,128,0.14), transparent 70%); }
+
+/* ── Step number badge ── */
+.how__step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.how__step--orange .how__step-badge {
+  background: rgba(234,88,12,0.15);
+  border: 1.5px solid rgba(234,88,12,0.4);
+}
+.how__step--blue .how__step-badge {
+  background: rgba(26,107,255,0.15);
+  border: 1.5px solid rgba(26,107,255,0.4);
+}
+.how__step--green .how__step-badge {
+  background: rgba(74,222,128,0.12);
+  border: 1.5px solid rgba(74,222,128,0.35);
 }
 
 .how__step-num {
-  font-size: 52px;
+  font-size: 18px;
   font-weight: 900;
-  color: rgba(234,88,12,0.15);
-  letter-spacing: -2px;
+  letter-spacing: -0.5px;
   line-height: 1;
-  margin-bottom: 16px;
+}
+.how__step--orange .how__step-num { color: #FB923C; }
+.how__step--blue   .how__step-num { color: #60A5FA; }
+.how__step--green  .how__step-num { color: #4ADE80; }
+
+/* ── Connector ── */
+.how__connector {
+  position: absolute;
+  top: 54px;
+  right: -14px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.how__connector-line {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 8px 0 0 rgba(255,255,255,0.2), 16px 0 0 rgba(255,255,255,0.2);
+}
+.how__connector-arrow {
+  font-size: 22px;
+  color: rgba(255,255,255,0.15);
+  margin-left: 20px;
+  line-height: 1;
 }
 
+/* ── Icon, title, desc ── */
 .how__step-icon { font-size: 40px; margin-bottom: 16px; }
 .how__step-title { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 10px; }
-.how__step-desc { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.65; }
+.how__step-desc  { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.65; }
 
-@media (max-width: 768px) { .how__steps { grid-template-columns: 1fr; } }
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .how__steps { grid-template-columns: 1fr; }
+  .how__connector { display: none; }
+}
