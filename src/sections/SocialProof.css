@@ -1,0 +1,27 @@
+.social-proof {
+  background: rgba(234,88,12,0.06);
+  border-top: 1px solid rgba(234,88,12,0.15);
+  border-bottom: 1px solid rgba(234,88,12,0.15);
+  overflow: hidden;
+  padding: 14px 0;
+}
+
+.social-proof__track {
+  display: flex;
+  gap: 48px;
+  animation: scroll-proof 28s linear infinite;
+  white-space: nowrap;
+}
+
+.social-proof__item {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  flex-shrink: 0;
+  letter-spacing: 0.2px;
+}
+
+@keyframes scroll-proof {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

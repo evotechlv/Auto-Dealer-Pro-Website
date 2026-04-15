@@ -1,0 +1,93 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13,15,20,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.header__logo .logo-icon { font-size: 22px; }
+.header__logo strong { color: var(--orange2); }
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header__nav a {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s;
+}
+.header__nav a:hover { color: #fff; }
+
+.header__cta {
+  background: var(--orange) \!important;
+  color: #fff \!important;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 14px \!important;
+  font-weight: 700 \!important;
+  transition: opacity 0.2s \!important;
+}
+.header__cta:hover { opacity: 0.88 \!important; }
+
+.header__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 4px;
+}
+.header__burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.header__burger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header__burger--open span:nth-child(2) { opacity: 0; }
+.header__burger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .header__burger { display: flex; }
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--dark2);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 0;
+  }
+  .header__nav--open { display: flex; }
+  .header__nav a {
+    padding: 14px 24px;
+    width: 100%;
+    font-size: 16px;
+  }
+  .header__cta { margin: 8px 24px; border-radius: 10px; text-align: center; }
+}

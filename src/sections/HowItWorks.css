@@ -1,0 +1,38 @@
+.how { position: relative; background: var(--dark2); overflow: hidden; }
+.how__bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(234,88,12,0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.how__header { margin-bottom: 72px; }
+
+.how__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+.how__step {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 36px 28px;
+  position: relative;
+}
+
+.how__step-num {
+  font-size: 52px;
+  font-weight: 900;
+  color: rgba(234,88,12,0.15);
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.how__step-icon { font-size: 40px; margin-bottom: 16px; }
+.how__step-title { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.how__step-desc { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.65; }
+
+@media (max-width: 768px) { .how__steps { grid-template-columns: 1fr; } }
